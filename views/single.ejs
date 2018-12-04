@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title><%=user.name%></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        #circle{
+            height: 600px;
+            width: 600px;
+            border-radius: 50%;
+            background-color: #464f5b;
+            color: Green;
+        }
+        #center{
+            text-align: center;
+            margin: auto;
+            width: 33%;
+            padding: 10px;
+        }
+        #top-padding{
+            padding-top: 30%;
+        }
+    </style>
 </head>
 <body>
-
+    <div id = "center">
+        <div id="circle">
+            <div id="top-padding">
+                <h1><strong><%=user.name%></strong></h1>
+                <h5><strong><%=userprice%></strong></h5>
+                <h3><%=user.quantity%></h3>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

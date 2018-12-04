@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <ul>
-        <%for(i =0; i< users.length; i++){%>
-            <li><%= users[i].name %> |<%= users[i].price %> <%= users[i].quantity %> </li>
-        <% } %>
-    </ul>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New Task</title>
+     <link rel="stylesheet" type="main/css" href="css/style.css">
+  </head>
+  <body>
+    <h1>New Product</h1>
+    <input type="text" id="title" placeholder="Name"><br/><br/>
+    <input type="text" id="title" placeholder="Price"><br/><br/>
+    <input type="text" id="title" placeholder="quantity"><br/><br/>
+    <button id="Add">submit</button>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script>
+      var product = {title:"", content:""};
+      $('#submit').click(function(event){
+        product.title = $('#title').val();
+        product.content = $('#content').val();
+        $.ajax({
+          method:"POST",
+          url:"/article/create",
+          data: article
+        }).done(function(response){
+          console.log(response);
+        }).fail(function(response){
+          console.log(response.responseText);
+        });
+      });
 
-</body>
+      $('#Add').click(function(event){
+        $.ajax({
+          method:"GET",
+          url:"/product/list"
+        }).done(function(response){
+          console.log(response);
+        }).fail(function(response){
+          console.log(response.responseText);
+        });
+      });
+
+    </script>
+  </body>
 </html>

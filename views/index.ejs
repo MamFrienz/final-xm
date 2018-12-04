@@ -5,13 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form View</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     
 <style>
-    #submit{
-        background-color: #3b3c3d;
-        color: white;
-    }
-    
     .center{
         text-align: center;
     }
@@ -20,12 +16,12 @@
 
 <body>
     
-    <div class="center">
-        <h1>New User</h1>
-        <input type="text" id="name" placeholder="Name" required><br>
-        <input type="number" id="price" placeholder="Price" required><br>
-        <input type="number" id="quantity" placeholder="Quantity" required><br>
-        <button id="add">Add</button>  
+    <div class="center form-group container">
+        <h1 class="jumbotron">New User</h1>
+        <input type="text" id="name" class="form-control" placeholder="Name" required><br>
+        <input type="number" id="email" class="form-control" placeholder="Price" required><br>
+        <input type="number" id="Quantity" class="form-control" placeholder="Age(Above 16)" min= “17” required><br>
+        <button id="submit" class="btn btn-dark">Add User</button>  
     </div>
     
     <script
@@ -40,8 +36,8 @@
         
         $('#submit').click(function(event){
             user.name = $('#name').val();
-            user.price = $('#price').val();
-            user.quantity= $('#quantity').val();
+            user.email = $('#price').val();
+            user.age = $('#quantity').val();
             
             $.ajax({
                 method:"POST",

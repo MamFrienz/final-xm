@@ -53,8 +53,8 @@ app.get('/list', function(request,response){
     
 });
 
-app.get('/list/:id', function(request,response){
-    User.findOne({_id: request.params.id},function(err, data){
+app.get('/list', function(request,response){
+    User.find(function(err, data){
         if(err){
             response.status(400).json({error: "Database query error"});
         }
@@ -66,8 +66,15 @@ app.get('/list/:id', function(request,response){
 });
 
 
-app.get('/single', function(request,response){
-    response.render('single.ejs');
+app.get('/single/:id', function(request,response){
+        User.findOne({_id: request.params.id},function(err, data){
+        if(err){
+            response.status(400).json({error: "Database query error"});
+        }
+        response.render('single.ejs', {
+            user: data
+        });
+    });
 });
 
 
