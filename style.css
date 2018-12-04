@@ -1,0 +1,49 @@
+*{
+    background-color: fff;
+}
+
+.post{
+    color:#808080;
+    text-align: center;
+}
+
+.view1{
+    color: #009999;
+    float:left;
+    margin:10px 100px 10px 220px;
+   
+}
+.view2{
+    color: #009999;
+    float:left;
+    margin:10px 150px 10px 150px;
+   
+}
+.view3{
+    color: #009999;
+    float:left;
+    margin:10px 150px 10px 150px;
+   
+}
+
+.newpost{
+    background-color: fff;
+    
+}
+
+h3{
+    color: #404040;
+    margin-left: 240px;
+}
+
+.newpost button{
+    margin-left: 240px;
+}
+
+.area{
+    margin-left: 240px;
+}
+
+.allpost{
+    margin:
+}

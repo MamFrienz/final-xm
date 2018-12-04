@@ -1,46 +1,34 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>New Task</title>
-  </head>
-  <body>
-    <h1>New Article</h1>
-    <input type="text" id="title" placeholder="Title"><br/><br/>
-    <textarea id="content" placeholder="Content"></textarea><br/>
-    <button id="submit">Submit</button>
-    <button id="getArticles">Get all articles</button>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-    <script>
-      var article = {title:"", content:""};
-      $('#submit').click(function(event){
-        article.title = $('#title').val();
-        article.content = $('#content').val();
-        $.ajax({
-          method:"POST",
-          url:"/article/create",
-          data: article
-        }).done(function(response){
-          console.log(response);
-        }).fail(function(response){
-          console.log(response.responseText);
-        });
-      });
-
-      $('#getArticles').click(function(event){
-        $.ajax({
-          method:"GET",
-          url:"/article/list"
-        }).done(function(response){
-          console.log(response);
-        }).fail(function(response){
-          console.log(response.responseText);
-        });
-      });
-
-    </script>
-  </body>
+<html>
+    <head>
+        <title>Exam</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div class="post"><h1>PRODUCTS</h1>
+        -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</br>
+        </div>
+        <div class="view">
+        
+        <div class="view1">Form view</div>
+        <div class="view2">List view</div>
+        <div class="view3">Single view</br></div>
+        </div>
+        
+        <div class="newpost">
+            <h3></br>New Post</h3>
+            <div class="nbtn"><button type="button" class="btn1">NAME</button><br>
+                              <button type="button" class="btn1">PRICE</button><br>
+                              <button type="button" class="btn1">QUANTITY</button>
+                              
+            </div>
+            <div class="area"><textarea rows="4" cols="25" placeholder="Post Text"></textarea></div>
+            <div class="addbtn"><button type="button" class="btn2">ADD</button></div>
+            
+        </div>
+        
+     
+        
+    </body>
+    
 </html>

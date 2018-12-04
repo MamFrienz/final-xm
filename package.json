@@ -1,19 +1,29 @@
 {
-  "name": "simple-node-server",
+  "name": "xm",
   "version": "1.0.0",
-  "description": "simple node server",
+  "description": "",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.14"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "SH",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MamFrienz/finalexam.git"
   },
-  "devDependencies": {
-    "nodemon": "^1.18.0"
-  }
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MamFrienz/finalexam/issues"
+  },
+  "homepage": "https://github.com/MamFrienz/finalexam#readme"
 }
